@@ -12,6 +12,17 @@ p {
     white-space: pre-line;
 }
 
+.home-1 {
+    font-size: 20px;
+    font-family: 'Josefin Slab';
+    color: black;
+    font-weight: lighter;
+    font-style: italic;
+    margin-left: 93%;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
 .container {
     background-color: rgb(255, 255, 255);
     height: 200vh;
@@ -138,7 +149,7 @@ p {
     font-family: 'Josefin Slab';
     font-size: clamp(0.8rem, 1.3vw, 2.2rem);
     color: #000000;
-    bottom: clamp(70%, 77vh, 95%);
+    bottom: clamp(70%, 89vh, 95%);
     left: clamp(1%, 2vw, 3%);
     white-space: pre-line;
     line-height: clamp(1.2, 1.4 + 0.5vw, 2);

@@ -14,6 +14,11 @@ function Popup(props) {
     props.setTrigger(false);
   };
 
+  const handleAdvancedUser = () => {
+    navigate('/advanced');
+    props.setTrigger(false);
+  };
+
   return (props.trigger) ? (
     <div className="popup">
         <div className="popup-inner">
@@ -24,7 +29,7 @@ function Popup(props) {
             { props.children }
             </div>
             <button className="g-button"onClick={handleGeneralUser}> General User</button>
-            <button className="a-button"onClick={ () => props.setTrigger(false)}> Advanced User</button>
+            <button className="a-button"onClick={handleAdvancedUser}> Advanced User</button>
         </div>
     </div>
   ): "";

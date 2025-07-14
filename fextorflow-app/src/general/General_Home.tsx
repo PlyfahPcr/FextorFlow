@@ -31,15 +31,23 @@ function General(props) {
     navigate('/general/core_general');
     props.setTrigger(false);
   };
+  const handleHome = () => {
+        navigate('/');
+        props.setTrigger(false);
+    };
   return (
     <div className="container">
         <div className='page'>
             <div className='custom-grid'>
+              <div className="home-1" onClick={handleHome}>
+                        HOME
+                </div>   
             <div className="s1"></div>
             <div className="logo-g">         
-                <div className="fextorflow-g" onClick={() => navigate(-1)}>
+                <div className="fextorflow-g" onClick={handleHome}>
                 Fextorflow
-                </div>                
+                </div>
+                             
             </div> 
             <div className="s2"></div>
             <div className="s3"></div>
