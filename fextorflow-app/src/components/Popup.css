@@ -16,7 +16,7 @@
     width: 25%;
     max-width: 640px;
     height: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 70%);
     border-radius: 25px;
 }
 
@@ -34,7 +34,7 @@
 .inner {
     width: inherit;
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 70%);
     border: none;
 }
 
@@ -113,8 +113,8 @@ label {
 }
 
 .g-button:hover {
-    background-color: rgba(192, 241, 169, 0.8);
-    color: rgb(0, 0, 0);
+    border:1px solid #7bff23;
+    color: #7bff23;
     transition: all 0.3s ease;
 }
 
@@ -136,7 +136,7 @@ label {
 }
 
 .a-button:hover {
-    background-color: rgba(192, 241, 169, 0.8);
-    color: rgb(0, 0, 0);
+    border:1px solid #7bff23;
+    color: #7bff23;
     transition: all 0.3s ease;
 }

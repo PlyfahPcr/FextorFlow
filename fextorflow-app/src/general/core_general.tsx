@@ -7,13 +7,14 @@ function Core_gen() {
   const navigate = useNavigate();
 
   return (
-    <div className='container-1'>
+    <div className='container-3'>
         <div className='use-ftf2'>
             <div className='wrapper'>
                 <div className='box1'>
                   <h3>Fextorflow</h3>
                   <div className='button-5' onClick={() => navigate(-1)}>
-                    <a href="#" className="previous">&#8249;</a>
+                    <p>DOWNLAOD</p>
+                    {/*<a href="#" className="previous">&#8249;</a>*/}
                   </div>
                 </div>
                 <div className='box2'>
@@ -30,7 +31,7 @@ function Core_gen() {
                 <div className='box3'>
                 </div>
                 <div className='box4'>
-                  <p>{'Happy:\nFearful:\nSadness:\nDisgusted:\nNeutral:\nAngry:\nSurprised:'}</p>
+                  <p>{'Face:\nPose:\nEmotion:\nPan:'}</p>
                 </div>
             </div>
         </div>
