@@ -43,7 +43,13 @@ function General(props) {
                 Fextorflow
                 </div>           
             </div> 
+          <div className='how-to'>
+            <div className='header-how'>
+              <p>How to use :</p>
+            </div>
+          </div>
         </div>
+        
         <div className={`overlay ${isVisible ? 'show' : ''}`}ref={section2Ref}>
                 <Core_gen></Core_gen>
         </div>

@@ -61,7 +61,7 @@ function Home(props) {
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
             </Popup>
             <img src="/public/img/left.png" alt="left arrow" className="L-arrow" />
-            <img src="/public/img/right.png" alt="left arrow" className="R-arrow" />
+            <img src="/public/img/right.png" alt="right arrow" className="R-arrow" />
         </div>
         
         </div>

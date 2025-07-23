@@ -1,0 +1,212 @@
+html, body {
+  scroll-behavior: smooth;         /* smooth scrolling */
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  margin: 0;
+  scrollbar-color: rgb(0, 0, 0) rgb(231, 215, 185);
+  scrollbar-width: thin;
+  border-radius: 8px;
+}
+
+p {
+    white-space: pre-line;
+}
+
+.home-nav {
+    display: flex;
+    gap: 30px;
+    margin-left: 80%;
+    margin-top: 3%;
+}
+
+.home-nav-item {
+    font-size: 25px;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 500;
+    font-weight: lighter;
+    font-style: italic;
+    font-family: 'Courier New';
+}
+
+.container-m {
+    background-image: radial-gradient(circle at top right, #D8E5FF, #fff);
+    height: 200vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-m {
+  scroll-snap-align: start;
+  height: 100vh;      
+  background-color: rgb(255, 255, 255);    
+  transition: background-color 0.6s ease, transform 0.6s ease;         
+}
+
+.logo-m {
+    position: absolute;
+    z-index: 1;
+    height: clamp(70px, 8vw, 200px);
+    width: clamp(70px, 8vw, 200px);
+    background-color: black;
+    top: clamp(1%, 6vh, 5%);
+    left: clamp(2%, 2vw, 4%);
+}
+
+.fextorflow-m {
+    font-family: 'Courier New';
+    font-size: clamp(0.8rem, 1.1vw, 2.2rem);
+    color: #ffffff;
+    transform: translate(
+        clamp(1px, 6vw, 12px), 
+        clamp(22px, 3vw, 70px)
+    );
+    cursor: pointer;
+}
+
+.use-m {
+    border: 2px solid #000;
+    width: 80%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: clamp(10px, 1vw, 20px);
+    background-color: #ffffff;
+}
+
+.use-m h3 {
+    padding: 20px;
+    color: #000;
+    font-family: 'Courier New';
+}
+
+.use-m p{
+    margin-left: 20px;
+    color: #000;
+    font-family: 'Courier New';
+}
+
+.page-m {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    flex-direction: row;
+}
+
+.m-graph {
+    width: 45%;
+    height: auto;
+    margin-bottom: -13%;
+    margin-left: 25%;
+}
+
+.m-name {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #000;
+    margin-left: 26%;
+    border-radius: 20px;
+}
+
+.m-name p{
+    color: #000;
+    margin-top: 6%;
+    margin-left: 16%;
+}
+
+.m-compare {
+    width: 350px;
+    height: 88px;
+    margin-left: 73%;
+    margin-top: 60%;
+    position: fixed;
+    font-size: 16px;
+    color: #000;
+    font-family: 'Courier New';
+    z-index: 10; /* Added z-index to ensure visibility */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Added transitions for hiding */
+    opacity: 1;
+    visibility: visible;
+}
+
+.m-compare.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.button-compare {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #000;
+    margin-left: 78%;
+    margin-top: 67%;
+    position: fixed; /* Changed from absolute to fixed for consistency */
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 15; /* Increased z-index to be above other elements */
+    background-color: #ffffff; /* Added background color to prevent transparency issues */
+    display: flex; /* Added flex for better content alignment */
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, opacity 0.5s ease, visibility 0.5s ease; /* Added transitions for hiding */
+    opacity: 1;
+    visibility: visible;
+}
+
+.button-compare.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.button-compare:hover {
+    background-color: #f0f0f0; /* Added hover effect */
+}
+
+.button-compare p{
+    font-size: 14px;
+    color:#000;
+    font-family: 'Courier New';
+    margin: 0; /* Reset margin for better centering */
+    pointer-events: none; /* Prevent p element from interfering with click events */
+}
+
+.overlay-m {
+    position: sticky;
+    top: 100vh;
+    height: 100vh;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; /* Lower z-index than button */
+    background-color: #ffffff;
+}
+
+.overlay-m.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.button-m {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 38%;
+    margin-right: 5%;
+    z-index: 100;
+    font-family: 'Courier New';
+    width: 100px;
+}

@@ -12,20 +12,20 @@ function Core_gen() {
             <div className='wrapper'>
                 <div className='box1'>
                   <h3>Fextorflow</h3>
-                  <div className='button-5' onClick={() => navigate(-1)}>
+                  {/*<div className='button-5' onClick={() => navigate(-1)}>
                     <p>DOWNLAOD</p>
-                    {/*<a href="#" className="previous">&#8249;</a>*/}
-                  </div>
+                    <a href="#" className="previous">&#8249;</a>
+                  </div>*/}
                 </div>
                 <div className='box2'>
                   <div className='button-2'>
-                    choose you're image
+                    Import Image
                   </div>
                   <div className='button-3'>
-                    choose you're video
+                    Import video
                   </div>
                   <div className='button-4'>
-                    webcam
+                    Webcam
                   </div>
                 </div>
                 <div className='box3'>

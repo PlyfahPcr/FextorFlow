@@ -92,11 +92,17 @@ const Advanced = (props) => {
         props.setTrigger(false);
     };
 
+    const handleCompare = () => {
+        navigate('/advanced/Compare');
+        props.setTrigger(false);
+    };
+
 const cards = [
   {
     url: "#",
-    title: "ข้อมูลเปรียบเทียบผลลัพธ์ในชุดข้อมูลเดียวกัน",
+    title: "comparative information about\n multiple model results on\n the same dataset",
     id: 1,
+    onClick: handleCompare,
   },
   {
     url: "#",
