@@ -7,7 +7,7 @@ const HorizontalScrollCarousel = ({ cards }) => {
   const containerRef = useRef(null);
   const originalCards = [...cards];
   const loopedCards = Array(5).fill(originalCards).flat();
-
+{/*}
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -39,7 +39,7 @@ const HorizontalScrollCarousel = ({ cards }) => {
         container.removeEventListener('wheel', handleWheel);
       };
     }
-  }, []);
+  }, []); */}
 
   return (
     <div 
@@ -100,20 +100,21 @@ const Advanced = (props) => {
 const cards = [
   {
     url: "#",
-    title: "comparative information about\n multiple model results on\n the same dataset",
+    title: "Model 1\n For who like to use an Image",
     id: 1,
-    onClick: handleCompare,
+    onClick: handleModel1,
   },
   {
     url: "#",
-    title: "Model 1",
+    title: "Model 2\n For who like to use a Video",
     id: 2,
     onClick: handleModel1,
   },
   {
     url: "#",
-    title: "Model 2",
+    title: "Model 3\n For who like to use a Webcam",
     id: 3,
+    onClick: handleModel1,
   },
   {
     url: "#",
@@ -132,16 +133,18 @@ const cards = [
                         Fextorflow
                         </div>                
                     </div> 
-                    <div className="home" onClick={handleHome}>
-                        HOME
-                    </div>
+                    <div className="home-nav">
+            <span className="home-nav-item" onClick={handleHome}>HOME</span>
+            <span className="home-nav-item" >ROLE</span>
+            <span className="home-nav-item" onClick={handleCompare}>COMPARATIVE</span>
+          </div>
                 </div>
                 <div className='middle'>
                     <HorizontalScrollCarousel cards={cards} />
                 </div>
                 <div className="bottom">
                     <div className='text'>
-                        <p>{'Expression (n.)\nthe act of saying what you think or\n showing how you feel using words or actions'}</p>
+                        <p>{'Expression (n.)\nthe act of saying what you think\n or showing how you feel using words or actions'}</p>
                     </div>
                     <div className='fer'>
                         <p>{'FER.'}</p>

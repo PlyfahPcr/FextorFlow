@@ -7,7 +7,7 @@ html, body {
 }
 
 .container-3 {
-    background-image: radial-gradient(circle at top right, #D8E5FF, #fff);
+    background: #F2F0E6;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -15,13 +15,14 @@ html, body {
 }
 
 .use-ftf2 {
-    border: 2px solid #000000;
     width: 80%;
     height: 80%;
     margin-top: 5%;
     margin-left: 10%;
     margin-bottom: 10px;
-    border-radius: clamp(10px, 1vw, 20px);
+    border-radius: 25px;
+    background: #FFFEF9;
+    box-shadow: 10px 5px 5px rgb(196, 196, 196);
 }
 
 .wrapper {
@@ -40,7 +41,6 @@ html, body {
     margin-top: 18px;
     margin-left: 4%;
     border: 2px solid #000000; 
-    border-radius: clamp(20px, 10vw, 30px);
     background-color: #000000;
 }
 
@@ -100,28 +100,27 @@ html, body {
 .box2 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 2;
+    grid-row-start: 1;
     grid-row-end: 4;
-    width: 70%;
-    height: 100%;
+    width: 61%;
+    height: 68%;
     margin-top: 2%;
     margin-left: 15%;
-    border-radius: clamp(20px, 10vw, 30px);
     background-color: #000000;
+    margin-top: 9%;
+    border-radius: 25px;
 }
 
 .box3 {
     grid-column-start: 2;
-    grid-column-end: 7;
-    grid-row-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
     grid-row-end: 7;
-    width: 90%;
-    height: 90%;
-    margin-top: 1%;
-    margin-left: 6px;
-    border: 2px solid #000000; 
+    width: 700px;
+    height: auto;
+    margin-top: 4%;
+    margin-left: 5%;
     border-radius: clamp(20px, 10vw, 30px);
-    background-color: #ffffff;
 }
 
 .box4 {
@@ -131,10 +130,8 @@ html, body {
     grid-row-end: 6;
     width: 70%;
     height: 100%;
-    margin-top: 15%;
+    margin-top: 13%;
     margin-left: 15%;
-    border-radius: clamp(20px, 10vw, 30px);
-    background-color: #000000 ;
 } 
 
 .box4 p {
@@ -155,11 +152,12 @@ html, body {
     cursor: pointer;
     position: absolute;
     margin-top: 1%;
-    margin-left: 26px;
+    margin-left: 13px;
     z-index: 100;
     font-family: 'Courier New';
-    width: 200px;
-    text-align: center;
+    width: 180px;
+    text-align: left;
+    height: 27px;
 }
 
 .button-3 {
@@ -171,11 +169,12 @@ html, body {
     cursor: pointer;
     position: absolute;
     margin-top: 5%;
-    margin-left: 26px;
+    margin-left: 13px;
     z-index: 100;
     font-family: 'Courier New';
-    width: 200px;
-    text-align: center;
+    width: 180px;
+    text-align: left;
+    height: 27px;
 }
 
 .button-4 {
@@ -187,11 +186,137 @@ html, body {
     cursor: pointer;
     position: absolute;
     margin-top: 9%;
-    margin-left: 26px;
+    margin-left: 13px;
     z-index: 100;
     font-family: 'Courier New';
-    width: 200px;
-    text-align: center;
+    width: 180px;
+    text-align: left;
+    height: 27px;
+}
+
+.add_img {
+    width: 37px;
+    position: fixed;
+    margin-left: 1%;
+    margin-top: -4px;
+}
+
+.add_img_wc {
+    width: 45px;
+    position: fixed;
+    margin-left: 70px;
+    margin-top: -7px;
+}
+
+
+/*
+.thought {
+  background-color:#e0a9a9;
+  padding:20px;
+  border-radius:30px;
+  min-width:40px;
+  min-height:10px;
+  margin:-70px;
+  position: fixed;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.thought:before,
+.thought:after {
+  content:"";
+  background-color:#deb6b6;
+  border-radius:50%;
+  display:block;
+}
+
+.thought:before {
+  width:40px;
+  height:10px;
+  left:28px;
+  box-shadow:-50px 30px 0 -12px #deb6b6;
+}
+
+.thought:after {
+  bottom:-10px;
+  right:26px;
+  width:30px;
+  height:30px;
+  box-shadow:40px -34px 0 0 #deb6b6,
+             -28px -6px 0 -2px #deb6b6,
+             -24px 17px 0 -6px #deb6b6,
+             -5px 25px 0 -10px #deb6b6;
+  
+}*/
+
+
+.plot {
+    border-radius: clamp(20px, 10vw, 30px);
+    max-width: 70%;
+    height: auto;
+    margin: 5px 0 0 50px;
+}
+
+canvas {
+    height: 40vh !important;
+    width: 50vh;
+}
+
+.preview-header {
+  background-color: #ccc;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 2px #000;
+}
+
+.preview-title {
+  font-size: 0.9rem;
+  margin-left: 8px;
+  color: #333;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.preview-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 90%;
+  background-color: #f1f1f1;
+}
+
+.preview-frame {
+  position: relative;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 478px;
+  display: block;
+  place-content: center;
+}
+
+.model-overlay {
+  position: absolute;
+  z-index: 1000;
+  border: 2px solid #000000;
+}
+
+.model-header {
+  background-color: #ccc;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #000;
+  height: 10px;
 }
 
 

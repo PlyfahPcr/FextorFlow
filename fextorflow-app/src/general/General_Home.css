@@ -12,6 +12,24 @@ p {
     white-space: pre-line;
 }
 
+.navg {
+    display: flex;
+    gap: clamp(20px, 3vw, 40px);
+    align-items: center;
+}
+
+.navg-item {
+    font-size: 40px;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-family: "Italiana", sans-serif;
+    margin-left: -160%;
+    margin-top: -180%;
+}
+
 .home-1 {
     font-size: 20px;
     font-family: 'Courier New';
@@ -19,6 +37,17 @@ p {
     font-weight: lighter;
     font-style: italic;
     margin-left: 70%;
+    margin-top: -36%;
+    cursor: pointer;
+}
+
+.role-1 {
+    font-size: 20px;
+    font-family: 'Courier New';
+    color: black;
+    font-weight: lighter;
+    font-style: italic;
+    margin-left: 2%;
     margin-top: -36%;
     cursor: pointer;
 }

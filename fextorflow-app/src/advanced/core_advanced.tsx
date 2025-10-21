@@ -14,6 +14,29 @@ function Core_Ad(props) {
     }
   };
 
+  const [file, setFile] = useState(null);
+  const fileInputRef = useRef(null);
+  const videoInputRef = useRef(null);
+  
+    function handleChange(e) {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
+  
+    function handleVideoChange(e) {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
+  
+    const handleImportClick = () => {
+        fileInputRef.current.click();
+    };
+  
+    const handleVideoClick = () => {
+        videoInputRef.current.click();
+    };
+  
+
   return (
     <div className='container-ad'>
         <div className='use-ad'>
@@ -26,20 +49,46 @@ function Core_Ad(props) {
                   </div>
                 </div>
                 <div className='box2-ad'>
-                  <div className='button-2ad'>
+                  <div className='button-2ad' onClick={handleImportClick}>
                     Import Image
+                    <img src="/img/add-image.png" className='ad_add_img'/>
+                    <input 
+                        type="file" 
+                        ref={fileInputRef}
+                        onChange={handleChange} 
+                        style={{ display: 'none' }}
+                      />
                   </div>
-                  <div className='button-3ad'>
+                  <div className='button-3ad' onClick={handleVideoClick}>
                     Import video
+                    <img src="/img/video-production.png" className='ad_add_img'/>
+                    <input 
+                        type="file" 
+                        ref={videoInputRef}
+                        onChange={handleVideoChange} 
+                        style={{ display: 'none' }}
+                      />
                   </div>
                   <div className='button-4ad'>
                     Webcam
+                    <img src="/img/webcam.png" className='ad_add_img_wc'/>
                   </div>
                 </div>
                 <div className='box3-ad'>
+                  {file && (
+                    file.includes('video') || file.includes('.mp4') || file.includes('.mov') || file.includes('.avi') ? 
+                    <video src={file} controls style={{ maxWidth: '100%', height: 'auto' }} /> :
+                    <img src={file} alt="Uploaded preview" style={{ maxWidth: '100%', height: 'auto' }} />
+                  )}
                 </div>
                 <div className='box4-ad'>
-                  <p>{'Face:\nPose:\nEmotion:\nPan:'}</p>
+                  <div className="person-ad">
+                    <div className="person-ad__head">
+                      <div className='person-ad__head2'></div>
+                      <div className='person-ad__face'>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>

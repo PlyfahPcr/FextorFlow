@@ -15,7 +15,7 @@ p {
 .home-nav {
     display: flex;
     gap: 30px;
-    margin-left: 80%;
+    margin-left: 74%;
     margin-top: 3%;
 }
 
@@ -35,13 +35,6 @@ p {
     width: 100vw;
     display: flex;
     flex-direction: column;
-}
-
-.section-m {
-  scroll-snap-align: start;
-  height: 100vh;      
-  background-color: rgb(255, 255, 255);    
-  transition: background-color 0.6s ease, transform 0.6s ease;         
 }
 
 .logo-m {
@@ -121,30 +114,31 @@ p {
 }
 
 .m-compare {
-    width: 350px;
+    width: 300px;
     height: 88px;
-    margin-left: 73%;
-    margin-top: 60%;
+    margin-left: 87%;
+    margin-top: 53%;
     position: fixed;
-    font-size: 16px;
-    color: #000;
-    font-family: 'Courier New';
-    z-index: 10; /* Added z-index to ensure visibility */
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Added transitions for hiding */
-    opacity: 1;
     visibility: visible;
 }
-
+ /*
 .m-compare.hidden {
     opacity: 0;
     visibility: hidden;
+}*/
+
+.m-compare p {
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Courier New';
+    font-weight: bold;
 }
 
 .button-compare {
     width: 120px;
     height: 30px;
     border: 1px solid #000;
-    margin-left: 78%;
+    margin-left: 88%;
     margin-top: 67%;
     position: fixed; /* Changed from absolute to fixed for consistency */
     font-size: 16px;
@@ -155,16 +149,15 @@ p {
     display: flex; /* Added flex for better content alignment */
     align-items: center;
     justify-content: center;
-    transition: background-color 0.2s ease, opacity 0.5s ease, visibility 0.5s ease; /* Added transitions for hiding */
     opacity: 1;
     visibility: visible;
 }
-
+/*
 .button-compare.hidden {
     opacity: 0;
     visibility: hidden;
 }
-
+*/
 .button-compare:hover {
     background-color: #f0f0f0; /* Added hover effect */
 }
@@ -176,7 +169,7 @@ p {
     margin: 0; /* Reset margin for better centering */
     pointer-events: none; /* Prevent p element from interfering with click events */
 }
-
+/*
 .overlay-m {
     position: sticky;
     top: 100vh;
@@ -187,7 +180,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2; /* Lower z-index than button */
+    z-index: 2;
     background-color: #ffffff;
 }
 
@@ -195,7 +188,7 @@ p {
     transform: translateY(0);
     opacity: 1;
 }
-
+*/
 .button-m {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -209,4 +202,21 @@ p {
     z-index: 100;
     font-family: 'Courier New';
     width: 100px;
+}
+
+.circle-img {
+    width: 370px;
+    height: 350px;
+    margin-left: 78%;
+    position: fixed;
+    margin-top: 45%;
+    transform: rotate(30deg);
+}
+
+.ardown-img {
+    width: 300px;
+    height: 300px;
+    margin-left: 83%;
+    position: fixed;
+    margin-top: 53%;
 }

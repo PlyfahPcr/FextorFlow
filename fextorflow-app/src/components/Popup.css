@@ -10,13 +10,25 @@
     z-index: 150;
 }
 
+h2 {
+    font-family: 'Courier New';
+    margin: 10px;
+    color:#000;
+}
+
+p {
+    font-family: "Inconsolata", monospace;
+    font-size: 16px;
+    margin: 10px;
+    color:#000;
+}
 .popup-inner {
     position: relative;
     padding: 32px;
-    width: 25%;
-    max-width: 640px;
-    height: 50%;
-    background-color: rgb(255, 255, 255, 70%);
+    width: 100%;
+    max-width: 700px;
+    height: 65%;
+    background-color: rgb(255, 255, 255, 60%);
     border-radius: 25px;
 }
 
@@ -29,12 +41,13 @@
     left: 90%;
     top: -20px;
     border: none;
+    z-index: 100;
 }
 
 .inner {
     width: inherit;
     text-align: center;
-    background-color: rgb(255, 255, 255, 70%);
+    background-color: rgb(255, 255, 255, 20%);
     border: none;
 }
 
@@ -96,47 +109,140 @@ label {
 }
 
 .g-button {
-    background-color: rgb(0, 0, 0);
+    background-color: #C3B2EB;
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 15px;
+    border-radius: 30px;
     cursor: pointer;
     position: relative;
-    left: 20%;
-    top: 50px;
+    left: 10%;
+    top: -67%;
     z-index: 100;
-    width: 250px;
+    width: 200px;
     height: 60px;
     text-align: center;
-    font-family: 'Josefin Slab';
+    font-family: "Inconsolata", monospace;
     font-size: 1.2em;
 }
 
 .g-button:hover {
-    border:1px solid #7bff23;
-    color: #7bff23;
+    border:4px solid #c8ff00;
+    background-color: #e1f598;
+    color: #000000;
     transition: all 0.3s ease;
 }
 
 .a-button {
-    background-color: rgb(0, 0, 0);
+    background-color: #F56E4D;
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 15px;
+    border-radius: 30px;
     cursor: pointer;
-    position: relative;
-    left: 20%;
-    top: 120px;
+    position: absolute;
+    left: 10%;
+    top: 290px;
     z-index: 100;
-    width: 250px;
+    width: 200px;
     height: 60px;
     text-align: center;
-    font-family: 'Josefin Slab';
+    font-family: "Inconsolata", monospace;
     font-size: 1.2em;
 }
 
 .a-button:hover {
-    border:1px solid #7bff23;
-    color: #7bff23;
+    border:4px solid #c8ff00;
+    background-color: #e1f598;
+    color: #000000;
     transition: all 0.3s ease;
+}
+
+
+.info-wrapper {
+  position: fixed;
+  width: 5%;
+}
+
+.info {
+  width: 40%;
+  height: auto;
+  margin-left: 2%;
+  cursor: pointer;
+  margin-top: -9%;
+  z-index: 100;
+}
+
+.hide {
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  font-family: 'Courier New';
+  color: rgb(0, 0, 0);
+  margin-left: -100%;
+  z-index: 10;
+  margin-top: 2%
+}
+
+.info-wrapper:hover .hide {
+  display: block;
+}
+
+.s3-h {
+    width: 16%;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    transform: skew(
+        clamp(2deg, 4deg, 4deg), 
+        clamp(6deg, 10deg, 3deg)
+    );
+    border-radius: 20px;
+    border: 1px solid #000;
+    position: fixed;
+    left: 30%;
+    top: 30%;
+}
+
+.s2-h {
+    width: 16%;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    transform: skew(
+        clamp(-4deg, -7deg, -7deg), 
+        clamp(2deg, 3deg, 3deg)
+    );
+    border-radius: 20px;
+    border: 1px solid #000;
+    position: fixed;
+    left: 50%;
+}
+
+.angry {
+    position: relative;
+    width: 150%;
+    height: 100%;
+    left: -60%;
+    top: -20%;
+}
+
+.angry-text {
+    position: absolute;
+    left: -90%;
+    top: -8%;
+    width: 250%;
+    height: 150%;
+}
+
+.fear {
+    position: relative;
+    width: 220%;
+    height: 120%;
+    left: -90%;
+    top: -94%;
+}
+
+.fear-text {
+    position: absolute;
+    left: -60%;
+    top: 20%;
+    width: 200%;
+    height: 100%;
 }

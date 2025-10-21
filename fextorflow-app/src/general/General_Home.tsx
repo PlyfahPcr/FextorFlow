@@ -3,6 +3,7 @@ import './General_Home.css'
 import { useNavigate } from 'react-router-dom';
 import Core_gen from './core_general';
 
+
 function General(props) {
   const section2Ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -32,29 +33,29 @@ function General(props) {
         navigate('/');
         props.setTrigger(false);
     };
+
+  
   return (
     <div className="container">
         <div className='page'>
               <div className="home-1" onClick={handleHome}>
                         HOME
-                </div>   
+                </div>
+              <div className="role-1">
+                        ROLE
+                </div>
+
             <div className="logo-g">         
                 <div className="fextorflow-g" onClick={handleHome}>
                 Fextorflow
                 </div>           
             </div> 
-          <div className='how-to'>
-            <div className='header-how'>
-              <p>How to use :</p>
-            </div>
-          </div>
         </div>
         
         <div className={`overlay ${isVisible ? 'show' : ''}`}ref={section2Ref}>
                 <Core_gen></Core_gen>
         </div>
     </div>
-   
   );
 }
 

@@ -7,11 +7,10 @@ html, body {
 }
 
 .container-ad {
-    background-image: radial-gradient(circle at top right, #D8E5FF, #fff);
-    height: 100vh;
-    width: 100vw;
+    height: 85vh;
+    width: 85vw;
     display: flex;
-    flex-direction: column;
+    margin-left: 6%;
 }
 
 .use-ad {
@@ -36,7 +35,7 @@ html, body {
     grid-row-start: 1;
     grid-row-end: 1;
     width: 91%;
-    height: 60%;
+    height: 50%;
     margin-top: 18px;
     margin-left: 4%;
     border: 2px solid #000000; 
@@ -47,7 +46,7 @@ html, body {
 .box1-ad h3{
     color: #ffffff;
     margin-left: 20px;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 1%;
     font-family: 'Courier New';
     letter-spacing: 2px;
@@ -59,43 +58,24 @@ html, body {
     border: none;
     border-radius: clamp(20px, 15vw, 30px);
     cursor: pointer;
-    z-index: 100;
+    z-index: 200;
     font-family: 'Courier New';
-    height: 50px;
+    height: 40px;
     width: 160px;
     text-align: center;
 }
 
 .box1-ad .button-5ad{
-    margin-left: 85%;
-    margin-top: -81px;
+    margin-left: 82%;
+    margin-top: -55px;
 }
 
 .button-5ad p {
-    font-size: 20px;
+    font-size: 17px;
     color: #000000;
-    padding-top: 7%;
+    padding-top: 6%;
 }
 
-.blank {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    position: fixed;
-    margin-left: 26%;
-    z-index: 100;
-    font-family: 'Courier New';
-    width: 300px;
-    height: 40px;
-    text-align: center;
-    margin-top: -75px;
-    border-radius: 26px;
-
-}
-
-.blank p{
-    font-size: 25px;
-    margin-top: 0%;
-}
 
 .box2-ad {
     grid-column-start: 1;
@@ -103,7 +83,7 @@ html, body {
     grid-row-start: 2;
     grid-row-end: 4;
     width: 70%;
-    height: 100%;
+    height: 80%;
     margin-top: 2%;
     margin-left: 15%;
     border-radius: clamp(20px, 10vw, 30px);
@@ -116,7 +96,7 @@ html, body {
     grid-row-start: 2;
     grid-row-end: 7;
     width: 90%;
-    height: 90%;
+    height: 70%;
     margin-top: 1%;
     margin-left: 6px;
     border: 2px solid #000000; 
@@ -130,17 +110,16 @@ html, body {
     grid-row-start: 4;
     grid-row-end: 6;
     width: 70%;
-    height: 100%;
-    margin-top: 15%;
+    height: 80%;
+    margin-top: 0%;
     margin-left: 15%;
     border-radius: clamp(20px, 10vw, 30px);
-    background-color: #000000 ;
 } 
 
 .box4-ad p {
     font-family: 'Courier New';
-    font-size: 25px;
-    margin-top: 28px;
+    font-size: 20px;
+    margin-top: 26px;
     margin-left: 15px;
     color: #ffffff;
     white-space: pre-line;
@@ -158,8 +137,10 @@ html, body {
     margin-left: 26px;
     z-index: 100;
     font-family: 'Courier New';
-    width: 200px;
-    text-align: center;
+    width: 150px;
+    text-align: left;
+    height: 20px;
+    font-size: 14px;
 }
 
 .button-3ad {
@@ -170,12 +151,14 @@ html, body {
     border-radius: 25px;
     cursor: pointer;
     position: absolute;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-left: 26px;
     z-index: 100;
     font-family: 'Courier New';
-    width: 200px;
-    text-align: center;
+    width: 150px;
+    text-align: left;
+    height: 20px;
+    font-size: 14px;
 }
 
 .button-4ad {
@@ -186,12 +169,141 @@ html, body {
     border-radius: 25px;
     cursor: pointer;
     position: absolute;
-    margin-top: 9%;
+    margin-top: 7%;
     margin-left: 26px;
     z-index: 100;
     font-family: 'Courier New';
-    width: 200px;
-    text-align: center;
+    width: 150px;
+    text-align: left;
+    height: 20px;
+    font-size: 14px;
+}
+
+.ad_add_img {
+    width: 28px;
+    margin-left: 7%;
+    margin-top: -4px;
+    position: absolute;
+}
+
+.ad_add_img_wc {
+    width: 28px;
+    margin-left: 62px;
+    margin-top: -5px;
+    position: absolute;
+}
+
+/*face*/
+.person-ad, .person-ad::before, .person-ad::after, .person-ad__head2, .person-ad *, .person-ad *::after, .person-ad *::before {
+    position: absolute;
+    content: '';
+}
+
+/*body*/
+.person-ad{
+    background: 
+        /*skin*/
+        radial-gradient(var(--light-skin) 70%, transparent 0), 0 -25px no-repeat;
+    width: 100px;
+    height: 10px;
+    top: 79%;
+    left: 22%;
+    border-radius: 50%;
+
+}
+
+/*neck*/
+.person-ad::before{
+    top: -27px;
+    left: 30px;
+    width: 40px;
+    height: 30px;
+    background: 
+        linear-gradient(140deg, var(--skin) 50%, transparent calc(50% + 1px)),
+        var(--light-skin);
+    -webkit-mask-image: linear-gradient(80deg, black 80%, transparent calc(80% + 1px));    
+}
+
+/*ear and hair*/
+.person-ad__head{
+    top: -66px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    background:var(--dark-skin);
+    border-radius: 50%;
+    box-shadow: 
+        /*ear*/
+        60px 0 var(--skin),
+        /*hair*/
+        30px -40px 0 2px var(--dark-orange),
+        50px -34px var(--dark-orange),
+        65px -24px 0 4px var(--dark-orange),
+        15px -23px 0 1px var(--dark-orange),
+        15px -30px 0 1px var(--brown),
+        1px -20px 0 3px var(--brown),
+        44px -45px var(--brown),
+        61px -40px var(--brown)
+    ;
 }
 
 
+.person-ad__head2{
+    top: -2px;
+    left: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 
+        /*hair*/
+        30px -40px 0 2px var(--dark-orange),
+        50px -34px var(--dark-orange),
+        65px -24px 0 4px var(--dark-orange),
+        15px -23px 0 1px var(--dark-orange),
+        15px -30px 0 1px var(--brown),
+        10px -20px 0 1px var(--brown),
+        44px -45px var(--brown),
+        61px -40px var(--brown)
+    ;
+}
+
+.person-ad__head::before{
+    top: -17px;
+    left: 10px;
+    width: 67px; aspect-ratio: 1/1;
+    background: var(--light-skin);
+    border-radius: 50%;
+}
+
+/*lips*/
+.person-ad__head::after {
+    top: 20px;
+    left: 26px;
+    width: 35px;
+    height: 15px;
+    border-radius: 0 0 50% 50%;
+    box-shadow: inset 0 -13px 0 -11px var(--dark-skin) ;
+}
+
+/*eyes*/
+.person-ad__face{
+    width: 5px; aspect-ratio: 1/1;
+    background: var(--dark-brown);
+    border-radius: 50%;
+    top: 6px;
+    left: 23px;
+    box-shadow: 35px 0 var(--dark-brown);
+}
+
+.person-ad__frackle {
+    width: 2px; aspect-ratio: 1/1;
+    background: var(--light-brown);
+    border-radius: 50%;
+    top: 12px;
+    left: 1px;
+    box-shadow: 
+        10px 3px var(--light-brown),
+        19px 0 var(--light-brown),
+        28px 3px var(--light-brown),
+        37px 0 var(--light-brown)
+}

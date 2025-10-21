@@ -63,7 +63,7 @@
 
 .carousel-track {
   display: flex;
-  gap: 11rem;
+  gap: 8rem;
   will-change: transform;
   overflow-x: auto;
   overflow-y: hidden;
@@ -71,6 +71,7 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   white-space: nowrap;
+  margin-left: 3%;
 }
 
 .carousel-track::-webkit-scrollbar {
@@ -143,8 +144,8 @@
 
 .text {
     text-align: left;
-    font-size: 1.5rem;
-    margin-top: 3%;
+    font-size: 1rem;
+    margin-top: 5%;
     margin-left: 1%;
     font-family: 'Courier New';
     color: black;
